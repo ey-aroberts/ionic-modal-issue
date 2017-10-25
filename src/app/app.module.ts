@@ -10,8 +10,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { TestModal1 } from '../pages/modals/test1/test.modal';
-import { TestModal2 } from '../pages/modals/test2/test.modal';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 @NgModule({
   declarations: [
@@ -19,27 +18,24 @@ import { TestModal2 } from '../pages/modals/test2/test.modal';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,
-    TestModal1,
-    TestModal2
+    TabsPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp)
-  ],
+    ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,
-    TestModal1,
-    TestModal2
+    TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    InAppBrowser,    
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
